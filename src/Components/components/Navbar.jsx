@@ -1,4 +1,5 @@
 import React from 'react';
+import plusIcon from '../../assets/plus.png'
 
 const Navbar = () => {
     return (
@@ -54,7 +55,7 @@ const Navbar = () => {
 
                         {/* New Ticket Button (Always Visible) */}
                         <button className="btn btn-primary ml-2 bg-linear-to-r from-[#632EE3] to-[#9F62F2] border-0">
-                            New Ticket
+                            <img src={plusIcon} alt="plusIcon" srcset="" />  New Ticket
                         </button>
 
                     </div>
