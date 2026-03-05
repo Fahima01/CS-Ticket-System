@@ -2,14 +2,14 @@ import React from 'react';
 import image2 from '../../assets/image2.png';
 import image1 from '../../assets/Group-1.png';
 
-const Banner = () => {
+const Banner = ({ inProgressCount, resolvedCount }) => {
     return (
         <section className='w-full bg-[#F5F5F5] py-10'>
             <div className="max-w-7xl mx-auto px-4">
                 {/* banner-cards */}
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div
-                        className="h-62.5 
+                        className="h-50
              rounded-lg 
              text-base-100
              flex flex-col justify-center items-center"
@@ -21,11 +21,11 @@ const Banner = () => {
                         }}
                     >
                         <p className="text-xl">In-Progress</p>
-                        <p className="text-5xl font-bold">0</p>
+                        <p className="text-5xl font-bold">{inProgressCount}</p>
                     </div>
 
                     <div
-                        className="h-62.5 
+                        className="h-50 
              rounded-lg 
              text-base-100
              flex flex-col justify-center items-center"
@@ -37,7 +37,7 @@ const Banner = () => {
                         }}
                     >
                         <p className="text-xl">Resolved</p>
-                        <p className="text-5xl font-bold">0</p>
+                        <p className="text-5xl font-bold">{resolvedCount}</p>
                     </div>
                 </div>
             </div>
