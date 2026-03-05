@@ -33,14 +33,14 @@ const TicketCard = ({ ticket, onSelect, isActive }) => {
                 <p className="text-sm text-gray-500 mb-6 line-clamp-2">
                     {ticket.description}
                 </p>
-                <div className="flex justify-between items-center text-[11px] font-bold tracking-wider">
+                <div className="flex justify-between items-center text-[14px] font-semibold tracking-wider">
                     <div className="flex gap-3 items-center">
-                        <span className="text-gray-400">#{ticket.id}</span>
-                        <span className={priorityColors[ticket.priority] || "text-gray-400"}>
-                            {ticket.priority} PRIORITY
+                        <span className="text-gray-500">#{ticket.id}</span>
+                        <span className={priorityColors[ticket.priority.toUpperCase()] || "text-gray-500"}>
+                            {ticket.priority.toUpperCase()} PRIORITY
                         </span>
                     </div>
-                    <div className="flex items-center gap-4 text-gray-400">
+                    <div className="flex items-center gap-4 text-gray-500">
                         <span>{ticket.customer}</span>
                         <div className="flex items-center gap-1">
                             {/* Simple Calendar Icon Placeholder */}
