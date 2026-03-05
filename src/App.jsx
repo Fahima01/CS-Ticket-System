@@ -30,9 +30,9 @@ function App() {
       setSelectedTicket(prev => [...prev, ticket])
       setInProgressCount(prev => prev + 1)
 
-      toast.success(`Task "${ticket.title}" added to progress!`, {
-        position: "bottom-right",
-        autoClose: 2000,
+      toast.success(`Task added to progress!`, {
+        position: "top-right",
+        autoClose: 3000,
       });
     }
   };
@@ -48,8 +48,8 @@ function App() {
     setInProgressCount(prev => prev - 1)
 
     toast.info("Task marked as completed!", {
-      position: "bottom-right",
-      autoClose: 2000,
+      position: "top-right",
+      autoClose: 3000,
     });
   };
 
